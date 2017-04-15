@@ -29,7 +29,6 @@ for (var i = 0; i < args.length; i++) {
             if (answer.password === 'FluffyBunny') {
                 if (args.length === 1) {
                     displayAdminLog();
-
                 } else {
                     for (var i = 0; i < args.length; i++) {
                         args.splice(i, 1);
@@ -45,9 +44,8 @@ for (var i = 0; i < args.length; i++) {
                     newUserSearch(username, zip);
                 }
             }else {
-            	console.log('Incorrect Passwrod');
+            	console.log('Incorrect Password');
             }
-
         });
         // displayAdminLog();
     } else if (args[i].toLowerCase() === 'user') {
@@ -63,9 +61,5 @@ for (var i = 0; i < args.length; i++) {
         // console.trace(username, zip);
         let x = new UserSearch(username, zip);
         x.getWeather();
-
-
-
     } 
-
 }
