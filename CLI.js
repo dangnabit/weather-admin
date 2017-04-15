@@ -17,18 +17,20 @@ let username = '';
 
 for (var i = 0; i < args.length; i++) {
     if (args[i].toLowerCase() === 'admin') {
-        displayAdminLog();
+        displayAdminLog.displayAdminLog();
     } else if (args[i].toLowerCase() === 'user') {
         args.splice(i, 1);
         for (var i = 0; i < args.length; i++) {
-            console.log(args[i]);
+
             if (isNaN(args[i])) {
                 username = args[i];
                 args.splice(i, 1);
             }
         }
     	zip = args[0];
-    	UserSearch(username, zip);
+    	// console.trace(username, zip);
+    	let x = new UserSearch.UserSearch(username, zip);
+    	x.getWeather();
     }
     
 }
