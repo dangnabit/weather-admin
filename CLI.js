@@ -9,6 +9,7 @@
 let argv = require('argv');
 let admin = require('./WeatherAdmin.js');
 let UserSearch = require('./UserSearch.js');
+let inquirer = require('inquirer');
 
 let args = argv.run().targets;
 
@@ -20,26 +21,34 @@ let displayAdminLog = admin.displayAdminLog;
 
 for (var i = 0; i < args.length; i++) {
     if (args[i].toLowerCase() === 'admin') {
+        inquirer.prompt({
+            type: 'password',
+            message: 'Type your password, nerd: ',
+            name: 'password'
+        }).then(function(answer) {
+            if (answer.password === 'FluffyBunny') {
+                if (args.length === 1) {
+                    displayAdminLog();
 
-        if (args.length === 1) {
-            displayAdminLog();
-
-        } else {
-            for (var i = 0; i < args.length; i++) {
-                args.splice(i, 1);
-                for (var i = 0; i < args.length; i++) {
-
-                    if (isNaN(args[i])) {
-                        username = args[i];
+                } else {
+                    for (var i = 0; i < args.length; i++) {
                         args.splice(i, 1);
+                        for (var i = 0; i < args.length; i++) {
+
+                            if (isNaN(args[i])) {
+                                username = args[i];
+                                args.splice(i, 1);
+                            }
+                        }
                     }
+                    zip = args[0];
+                    newUserSearch(username, zip);
                 }
+            }else {
+            	console.log('Wrong password, turd fergeson...');
             }
-            zip = args[0];
-        	newUserSearch(username,zip);
-        }
 
-
+        });
         // displayAdminLog();
     } else if (args[i].toLowerCase() === 'user') {
         args.splice(i, 1);
@@ -55,11 +64,11 @@ for (var i = 0; i < args.length; i++) {
         let x = new UserSearch(username, zip);
         x.getWeather();
 
-    	
+
 
     } else {
-    	console.log('Are you a user or admin, dummy?');
-    	break;
+        console.log('Are you a user or admin, dummy?');
+        break;
     }
 
 }

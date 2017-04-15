@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "argv": "0.0.2",
+    "inquirer": "^3.0.6",
     "moment": "^2.18.1",
     "weather": "^0.1.0",
     "weather-js": "^2.0.0"
