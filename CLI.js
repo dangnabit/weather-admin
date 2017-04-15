@@ -45,7 +45,7 @@ for (var i = 0; i < args.length; i++) {
                     newUserSearch(username, zip);
                 }
             }else {
-            	console.log('Wrong password, turd fergeson...');
+            	console.log('Incorrect Passwrod');
             }
 
         });
@@ -66,9 +66,6 @@ for (var i = 0; i < args.length; i++) {
 
 
 
-    } else {
-        console.log('Are you a user or admin, dummy?');
-        break;
-    }
+    } 
 
 }

@@ -14,7 +14,7 @@ var UserSearch = function (userName, zip){
 			}
 			else{
 				console.log(JSON.stringify(data,null,2));
-				fs.appendFile('log.txt', JSON.stringify(this.info, null, 2), (err) => {
+				fs.appendFile('log.txt', JSON.stringify(this.info, null, 2) + ',', (err) => {
 					if(err){
 						throw err;
 					}
