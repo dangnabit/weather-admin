@@ -27,4 +27,8 @@ var UserSearch = function (userName, zip){
 
 }
 
+<<<<<<< HEAD
 module.exports = UserSearch;
+=======
+module.exports = UserSearch;
+>>>>>>> 8fbe7ca258ef3e8214de563de553f1dc3311ddb9

@@ -20,6 +20,7 @@ let displayAdminLog = admin.displayAdminLog;
 
 for (var i = 0; i < args.length; i++) {
     if (args[i].toLowerCase() === 'admin') {
+
         if (args.length === 1) {
             displayAdminLog();
         } else {
@@ -38,6 +39,7 @@ for (var i = 0; i < args.length; i++) {
         }
 
 
+        displayAdminLog();
     } else if (args[i].toLowerCase() === 'user') {
         args.splice(i, 1);
         for (var i = 0; i < args.length; i++) {
@@ -51,6 +53,12 @@ for (var i = 0; i < args.length; i++) {
         // console.trace(username, zip);
         let x = new UserSearch(username, zip);
         x.getWeather();
+
+    	zip = args[0];
+    	// console.trace(username, zip);
+    	let x = new UserSearch(username, zip);
+    	x.getWeather();
+
     }
 
 }
