@@ -23,7 +23,7 @@ for (var i = 0; i < args.length; i++) {
 
         if (args.length === 1) {
             displayAdminLog();
-            
+
         } else {
             for (var i = 0; i < args.length; i++) {
                 args.splice(i, 1);
@@ -57,6 +57,9 @@ for (var i = 0; i < args.length; i++) {
 
     	
 
+    } else {
+    	console.log('Are you a user or admin, dummy?');
+    	break;
     }
 
 }
