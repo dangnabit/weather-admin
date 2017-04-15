@@ -23,6 +23,7 @@ for (var i = 0; i < args.length; i++) {
 
         if (args.length === 1) {
             displayAdminLog();
+            
         } else {
             for (var i = 0; i < args.length; i++) {
                 args.splice(i, 1);
@@ -39,7 +40,7 @@ for (var i = 0; i < args.length; i++) {
         }
 
 
-        displayAdminLog();
+        // displayAdminLog();
     } else if (args[i].toLowerCase() === 'user') {
         args.splice(i, 1);
         for (var i = 0; i < args.length; i++) {
