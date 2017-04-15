@@ -54,10 +54,7 @@ for (var i = 0; i < args.length; i++) {
         let x = new UserSearch(username, zip);
         x.getWeather();
 
-    	zip = args[0];
-    	// console.trace(username, zip);
-    	let x = new UserSearch(username, zip);
-    	x.getWeather();
+    	
 
     }
 
