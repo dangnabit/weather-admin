@@ -1,6 +1,6 @@
 let weather = require('weather-js');
 let fs = require('fs');
-module.exports.UserSearch = function (userName, zip){
+var UserSearch = function (userName, zip){
 	// this.userName = userName;
 	// this.zip = zip;
 	// this.date = Date.now();
@@ -26,3 +26,5 @@ module.exports.UserSearch = function (userName, zip){
 	return this;
 
 }
+
+module.exports = UserSearch;
