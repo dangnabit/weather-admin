@@ -1,5 +1,5 @@
 let fs = require('fs');
-module.exports.displayAdminLog = function() {
+var displayAdminLog = function() {
 	fs.readFile('log.txt', 'utf8', (error,data) => {
 		if(error){
 			throw error;
@@ -11,3 +11,4 @@ module.exports.displayAdminLog = function() {
 }
 
 
+module.exports = displayAdminLog;
